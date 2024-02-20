@@ -28,10 +28,6 @@ public class Main {
         String inputPath = new File(parentFile, "collapsar-generator-demo-projects/acm-template").getAbsolutePath();
         // 输出路径
         String outputPath = projectPath;
-        try {
-            FileUtil.copy(new File(inputPath), parentFile);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        FileUtil.copyFiles(new File(inputPath), parentFile);
     }
 }

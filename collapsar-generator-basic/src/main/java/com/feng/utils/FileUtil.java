@@ -18,19 +18,34 @@ import java.nio.file.StandardCopyOption;
  * @Version 1.0
  */
 public class FileUtil {
+    private FileUtil() {}
+    /**
+     * 把源文件复制到目标文件，如果目标文件已存在则替换它
+     * @param input 源文件
+     * @param output 目标文件
+     */
+    public static void copyFiles(File input, File output) {
+        try {
+            copy(input, output);
+        } catch (IOException e) {
+            System.err.println("复制文件失败");
+            e.printStackTrace();
+        }
+    }
+
     /**
      * 把源文件复制到目标文件，如果目标文件已存在则替换它
      * @param input 源文件
      * @param output 目标文件
      * @throws IOException IOException
      */
-    public static void copy(File input, File output) throws IOException {
+    private static void copy(File input, File output) throws IOException {
         // 是否为目录
         if(input.isDirectory()) {
             File outputFile = new File(output, input.getName());
             // 不存在就创建目录
-            if (!outputFile.exists()) {
-                outputFile.mkdirs();
+            if (!outputFile.exists() && !outputFile.mkdirs()) {
+                System.err.println("目录创建失败");
             }
             // 获取目录下的所有子文件或子目录
             File[] files = input.listFiles();

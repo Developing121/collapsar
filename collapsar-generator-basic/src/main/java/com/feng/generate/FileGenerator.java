@@ -14,6 +14,7 @@ import java.io.File;
  * @Version 1.0
  */
 public class FileGenerator {
+    private FileGenerator() {}
     /**
      * 根据模板文件和提供的模板数据生成 Java 模板项目
      * @param model 模板文件的数据

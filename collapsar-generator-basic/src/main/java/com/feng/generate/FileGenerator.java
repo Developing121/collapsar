@@ -24,7 +24,7 @@ public class FileGenerator {
         // 获取项目根路径
         String rootPath = new File(projectPath).getParentFile().getPath();
         // 获取文件输入路径
-        File inputFile = new File(rootPath + "/collapsar-generator-demo-projects/acm-template");
+        File inputFile = new File(rootPath + "/collapsar-generator-template/acm-template");
         // 获取文件输出路径
         File outputFile = new File(rootPath);
         // 生成静态文件

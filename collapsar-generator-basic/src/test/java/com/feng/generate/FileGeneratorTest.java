@@ -14,7 +14,7 @@ import org.junit.Test;
  */
 public class FileGeneratorTest {
     @Test
-    public void testgenerate() {
+    public void testGenerate() {
         MainTemplateModel model = new MainTemplateModel();
         model.setAuthor("Fengxd");
         model.setLoop(true);

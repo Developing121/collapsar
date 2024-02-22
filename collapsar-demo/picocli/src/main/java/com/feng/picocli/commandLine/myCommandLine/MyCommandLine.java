@@ -1,4 +1,4 @@
-package com.feng.picocli;
+package com.feng.picocli.commandLine.myCommandLine;
 
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -17,6 +17,7 @@ import picocli.CommandLine.Parameters;
 @Command(name = "ASCIIArt", version = "ASCIIArt 1.0", mixinStandardHelpOptions = true)
 public class MyCommandLine implements Runnable{// 1.实现 Runnable 接口或 Callable 接口
     // 3.通过 @Option 注解将字段设置为命令行选项，可以给选项设置名称和描述。
+    /*
     @Option(names = { "-s", "--font-size" }, description = "Font size", interactive = true, required = true)
     int fontSize = 19;
 
@@ -27,13 +28,16 @@ public class MyCommandLine implements Runnable{// 1.实现 Runnable 接口或 Ca
     @Parameters(paramLabel = "<word>", defaultValue = "Hello, picocli",
             description = "Words to be translated into ASCII art.")
     private String[] words = { "Hello,", "picocli" }; // 5.Picocli 会将命令行参数转换为强类型值，并自动注入到注解字段中。
-
+*/
     @Override
     public void run() {
         // 6.在类的 run 或 call 方法中定义业务逻辑，当命令解析成功（用户敲了回车）后被调用。
         // 自己实现业务逻辑
+        /*
         System.out.println("fontSize = " + fontSize);
         System.out.println("name = " + name);
         System.out.println("words = " + String.join(",", words));
+         */
+        System.out.println("主命令执行了...");
     }
 }

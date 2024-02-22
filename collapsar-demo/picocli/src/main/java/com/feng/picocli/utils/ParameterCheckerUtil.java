@@ -5,6 +5,7 @@ import picocli.CommandLine;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 /**
  * ClassName: ForcedInteraction
@@ -52,9 +53,9 @@ public class ParameterCheckerUtil<T> {
      * @return 合并后的参数
      */
     private String[] mergeAndDeduplicate(String[] requestArgs, String[] inputArgs) {
-        HashSet<String> args = new HashSet<>();
-        args.addAll(Arrays.asList(requestArgs));
+        LinkedHashSet<String> args = new LinkedHashSet<>();
         args.addAll(Arrays.asList(inputArgs));
+        args.addAll(Arrays.asList(requestArgs));
         return args.toArray(new String[0]);
     }
 }

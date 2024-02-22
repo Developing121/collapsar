@@ -1,7 +1,7 @@
 package com.feng;
 
 /**
-* ClassName: ${NAME}
+* ClassName: Main
 * Package: com.feng
 * Description: 
 * @Author Fengxd

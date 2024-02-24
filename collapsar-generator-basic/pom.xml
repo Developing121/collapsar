@@ -53,15 +53,6 @@
     </dependencies>
     <build>
         <plugins>
-            <!-- jar 输出到项目根目录 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <outputDirectory>${project.basedir}/../</outputDirectory>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -75,6 +66,7 @@
                             <mainClass>com.feng.Main</mainClass> <!-- 替换为你的主类的完整类名 -->
                         </manifest>
                     </archive>
+                    <outputDirectory>${project.basedir}/../</outputDirectory> <!-- 配置输出目录为项目根目录 -->
                 </configuration>
                 <executions>
                     <execution>

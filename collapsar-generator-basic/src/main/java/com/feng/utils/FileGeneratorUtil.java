@@ -104,6 +104,8 @@ public class FileGeneratorUtil {
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_32);
 
         File templateFile = new File(templatePath);
+        // 设置模板文件使用的数字格式
+        configuration.setNumberFormat("0.######");
         // 指定模板文件所在的路径
         configuration.setDirectoryForTemplateLoading(templateFile.getParentFile());
 

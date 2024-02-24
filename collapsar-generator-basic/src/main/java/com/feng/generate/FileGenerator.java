@@ -25,17 +25,23 @@ public class FileGenerator {
         // 获取项目根路径
         String rootPath = new File(projectPath).getParentFile().getPath();
         // 获取文件输入路径
-        File inputFile = new File(rootPath + "/collapsar-generator-template/acm-template");
+        File inputFile = new File(rootPath + "/collapsar-generator-template/collapsar");
         // 获取文件输出路径
         File outputFile = new File(rootPath);
         // 生成静态文件
         FileGeneratorUtil.doStaticFileGenerator(inputFile,outputFile);
         // 获取模板文件输入路径
-        String templateInputPath = projectPath + "/src/main/resources/templates/MainTemplate.java.ftl";
+        String indexInputPath = projectPath + "/src/main/resources/templates/collapsar/indexTemplate.html.ftl";
+        String scriptInputPath = projectPath + "/src/main/resources/templates/collapsar/scriptTemplate.js.ftl";
+        String styleInputPath = projectPath + "/src/main/resources/templates/collapsar/styleTemplate.css.ftl";
         // 获取模板文件的输出路径
-        String fileOutputPath = outputFile.getPath() + "/" + inputFile.getName() + "/src/com/feng/acm/MainTemplate.java";
+        String indexOutputPath = outputFile.getPath() + "/" + inputFile.getName() + "/index.html";
+        String scriptOutputPath = outputFile.getPath() + "/" + inputFile.getName() + "/script.js";
+        String styleOutputPath = outputFile.getPath() + "/" + inputFile.getName() + "/style.css";
         // 生成动态文件
-        FileGeneratorUtil.doDynamicFileGenerator(templateInputPath,fileOutputPath,model);
+        FileGeneratorUtil.doDynamicFileGenerator(indexInputPath,indexOutputPath,model);
+        FileGeneratorUtil.doDynamicFileGenerator(scriptInputPath,scriptOutputPath,model);
+        FileGeneratorUtil.doDynamicFileGenerator(styleInputPath,styleOutputPath,model);
     }
 
 }

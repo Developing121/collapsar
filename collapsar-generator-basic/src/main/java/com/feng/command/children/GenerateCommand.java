@@ -24,44 +24,44 @@ public class GenerateCommand implements Callable<Integer> {
             arity = "0..1", required = true, interactive = true, echo = true)
     private String author;
 
-    @CommandLine.Option(names = {"-t", "--title"}, description = "网页标题", defaultValue = "WebGL 网页黑洞特效",
+    @CommandLine.Option(names = {"-t", "--title"}, description = "网页标题", arity = "0..1", defaultValue = "WebGL 网页黑洞特效",
             interactive = true, echo = true)
     private String title = "WebGL 网页黑洞特效";
 
-    @CommandLine.Option(names = {"-d", "--description"}, description = "网页描述", defaultValue = "一个炫酷的 WebGL 网页黑洞特效",
+    @CommandLine.Option(names = {"-d", "--description"}, description = "网页描述", arity = "0..1", defaultValue = "一个炫酷的 WebGL 网页黑洞特效",
             interactive = true, echo = true)
     private String description = "一个炫酷的 WebGL 网页黑洞特效";
 
-    @CommandLine.Option(names = {"-b", "--background"}, description = "背景图片",
+    @CommandLine.Option(names = {"-b", "--background"}, description = "背景图片",arity = "0..1",
             defaultValue = "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1427&q=80",
             interactive = true, echo = true)
     private String background = "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1427&q=80";
 
-    @CommandLine.Option(names = {"-m", "--mass"}, description = "黑洞质量", defaultValue = "1500",
+    @CommandLine.Option(names = {"-m", "--mass"}, description = "黑洞质量", arity = "0..1", defaultValue = "1500",
             interactive = true, echo = true)
     private double mass = 1500;
 
-    @CommandLine.Option(names = {"-am", "--autoMove"}, description = "自动移动", defaultValue = "true",
+    @CommandLine.Option(names = {"-am", "--autoMove"}, description = "自动移动", arity = "0..1", defaultValue = "true",
             interactive = true, echo = true)
     private boolean autoMove = true;
 
-    @CommandLine.Option(names = {"-mm", "--mouseMove"}, description = "跟随鼠标移动", defaultValue = "true",
+    @CommandLine.Option(names = {"-mm", "--mouseMove"}, description = "跟随鼠标移动", arity = "0..1", defaultValue = "true",
             interactive = true, echo = true)
     private boolean mouseMove = true;
 
-    @CommandLine.Option(names = {"-mlm", "--mouseLeaveMove"}, description = "鼠标离开后自动移动", defaultValue = "true",
+    @CommandLine.Option(names = {"-mlm", "--mouseLeaveMove"}, description = "鼠标离开后自动移动", arity = "0..1", defaultValue = "true",
             interactive = true, echo = true)
     private boolean mouseLeaveMove = true;
 
-    @CommandLine.Option(names = {"-c", "--click"}, description = "鼠标点击动画", defaultValue = "true",
+    @CommandLine.Option(names = {"-c", "--click"}, description = "鼠标点击动画", arity = "0..1", defaultValue = "true",
             interactive = true, echo = true)
     private boolean click = true;
 
-    @CommandLine.Option(names = {"-tc", "--textColor"}, description = "字体颜色", defaultValue = "#000",
+    @CommandLine.Option(names = {"-tc", "--textColor"}, description = "字体颜色", arity = "0..1", defaultValue = "#000",
             interactive = true, echo = true)
     private String textColor = "#000";
 
-    @CommandLine.Option(names = {"-ts", "--textSize"}, description = "字体大小", defaultValue = "16px",
+    @CommandLine.Option(names = {"-ts", "--textSize"}, description = "字体大小", arity = "0..1", defaultValue = "16px",
             interactive = true, echo = true)
     private String textSize = "16px";
     @Override

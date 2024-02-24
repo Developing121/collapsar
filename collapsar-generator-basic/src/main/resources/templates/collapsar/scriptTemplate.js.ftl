@@ -50,9 +50,7 @@ function init(image) {
 	canvas.width  = window.innerWidth >= window.innerHeight ? window.innerWidth : window.innerHeight;
 	canvas.height = window.innerWidth >= window.innerHeight ? window.innerWidth : window.innerHeight;
 
-<#if autoMove>
 	mouse = {x: originX/2, y: -(originY/2) + canvas.height, moved: false};
-</#if>
 
 <#if mouseMove>
 	$(document).mousemove(function(e) {
@@ -184,12 +182,12 @@ function render() {
 	} else if(clickedTime > 0 && clicked == false) {
 		clickedTime += -(clickedTime*0.015);
 	}
-
+<#if autoMove>
 	if(mouse.moved == false){
 		mouse.y = (-(originY/2) + Math.sin(currentTime * 0.7) * ((originY * 0.25))) + canvas.height;
 		mouse.x = (originX/2) + Math.sin(currentTime * 0.6) * -(originX * 0.35);
 	}
-
+</#if>
 	gl.uniform1f(locationOfMass, curblackholeMass*0.00001);
 	gl.uniform2f(locationOfMouse, mouse.x, mouse.y);
 	gl.uniform1f(locationOfTime, currentTime); // update the time uniform in our shader

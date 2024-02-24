@@ -1,4 +1,4 @@
-package com.feng.model;
+package com.feng.model.template;
 
 import lombok.Data;
 

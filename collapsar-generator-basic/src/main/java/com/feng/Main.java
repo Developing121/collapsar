@@ -1,5 +1,7 @@
 package com.feng;
 
+import com.feng.command.CommandExecutor;
+
 /**
 * ClassName: Main
 * Package: com.feng
@@ -10,6 +12,7 @@ package com.feng;
 */
 public class Main {
     public static void main(String[] args) {
-
+        CommandExecutor commandExecutor = new CommandExecutor();
+        commandExecutor.execute(args);
     }
 }

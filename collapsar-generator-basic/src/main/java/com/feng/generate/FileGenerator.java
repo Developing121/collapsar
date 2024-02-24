@@ -23,17 +23,17 @@ public class FileGenerator {
         // 获取项目路径
         String projectPath = System.getProperty("user.dir");
         // 获取项目根路径
-        String rootPath = new File(projectPath).getParentFile().getPath();
+//        String rootPath = new File(projectPath).getParentFile().getPath();
         // 获取文件输入路径
-        File inputFile = new File(rootPath + "/collapsar-generator-template/collapsar");
+        File inputFile = new File(projectPath + "/collapsar-generator-template/collapsar");
         // 获取文件输出路径
-        File outputFile = new File(rootPath);
+        File outputFile = new File(projectPath);
         // 生成静态文件
         FileGeneratorUtil.doStaticFileGenerator(inputFile,outputFile);
         // 获取模板文件输入路径
-        String indexInputPath = projectPath + "/src/main/resources/templates/collapsar/indexTemplate.html.ftl";
-        String scriptInputPath = projectPath + "/src/main/resources/templates/collapsar/scriptTemplate.js.ftl";
-        String styleInputPath = projectPath + "/src/main/resources/templates/collapsar/styleTemplate.css.ftl";
+        String indexInputPath = projectPath + "/collapsar-generator-basic/src/main/resources/templates/collapsar/indexTemplate.html.ftl";
+        String scriptInputPath = projectPath + "/collapsar-generator-basic/src/main/resources/templates/collapsar/scriptTemplate.js.ftl";
+        String styleInputPath = projectPath + "/collapsar-generator-basic/src/main/resources/templates/collapsar/styleTemplate.css.ftl";
         // 获取模板文件的输出路径
         String indexOutputPath = outputFile.getPath() + "/" + inputFile.getName() + "/index.html";
         String scriptOutputPath = outputFile.getPath() + "/" + inputFile.getName() + "/script.js";

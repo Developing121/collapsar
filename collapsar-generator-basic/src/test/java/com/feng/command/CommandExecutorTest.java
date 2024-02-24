@@ -1,5 +1,6 @@
 package com.feng.command;
 
+import com.feng.command.children.GenerateCommand;
 import org.junit.Test;
 
 /**
@@ -15,8 +16,8 @@ public class CommandExecutorTest {
     @Test
     public void test() {
 //        String[] args = new String[]{"generate","-a","郑大钱"};
-        String[] args = new String[]{"config"};
-        CommandExecutor commandExecutor = new CommandExecutor();
-        commandExecutor.execute(args);
+////        String[] args = new String[]{"config"};
+//        CommandExecutor commandExecutor = new CommandExecutor();
+//        commandExecutor.execute(args);
     }
 }

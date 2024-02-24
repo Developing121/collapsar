@@ -1,6 +1,5 @@
 package com.feng.generate;
 
-import com.feng.model.MainTemplateModel;
 import com.feng.model.template.CollapsarTemplateModel;
 import org.junit.Test;
 

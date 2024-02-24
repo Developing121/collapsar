@@ -79,7 +79,7 @@ void main() {
 <div id="cover">
   <p>作者: ${author}</p>
   <p>标题: ${title}</p>
-  <p>描述 ${description}</p>
+  <p>描述: ${description}</p>
 </div>
 <canvas id="glscreen"></canvas>
 <!-- partial -->

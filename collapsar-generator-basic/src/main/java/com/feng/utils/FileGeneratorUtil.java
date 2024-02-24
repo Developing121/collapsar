@@ -110,7 +110,7 @@ public class FileGeneratorUtil {
         configuration.setDirectoryForTemplateLoading(templateFile.getParentFile());
 
         // 设置模板文件使用的字符集
-        configuration.setDefaultEncoding("utf-8");
+        configuration.setDefaultEncoding("UTF-8");
 
         // 创建模板对象，加载指定模板
         Template template = configuration.getTemplate(templateFile.getName());

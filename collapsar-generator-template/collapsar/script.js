@@ -1,13 +1,6 @@
-/**
- * todo
- * @author ZhengDQ
- */
-
 // set up global javascript variables
-	// todo:自定义图片
 var bgUrl = 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1427&q=80'
 
-// todo: 黑洞质量
 var blackholeMass = 1500;
 var curblackholeMass = 0;
 
@@ -37,7 +30,6 @@ var currentTime = 0;
 
 var clicked = false,
     clickedTime = 0;
-// todo 鼠标点击
 $(document).mousedown(function(){
 	clicked = true;
 });
@@ -52,17 +44,14 @@ function init(image) {
 	canvas.width  = window.innerWidth >= window.innerHeight ? window.innerWidth : window.innerHeight;
 	canvas.height = window.innerWidth >= window.innerHeight ? window.innerWidth : window.innerHeight;
 
-	// todo:自动移动
 	mouse = {x: originX/2, y: -(originY/2) + canvas.height, moved: false};
 
-	// todo:跟着鼠标移动
 	$(document).mousemove(function(e) {
 		mouse.x = e.pageX;
 		mouse.y = -e.pageY + canvas.height;
 		mouse.moved = true;
 	});
 
-	// todo:鼠标离开后继续自动移动
 	$(document).mouseleave(function(){
 		mouse.moved = false;
 	});

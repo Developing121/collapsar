@@ -14,15 +14,19 @@
 ## 技术选型
 - picocli
 - freemarker
-
+- 
 ## 使用
 1.进入 collapsar-generator-basic 目录,执行命令:
 ```shell
 mvn clean package
 ```
-
-## 在命令行中运行中文乱码的问题
-可以通过 JVM 的默认编码格式来解决
+2.进入 collapsar-generator-basic 目录的父目录(jar 所在的目录),执行命令:
 ```shell
-java -Dfile.encoding=utf-8 -jar xxx.jar
+generator generate --help
+```
+3.根据命令行提示,输入参数,生成代码
+
+4.查看其他命令
+```shell
+generator --help
 ```

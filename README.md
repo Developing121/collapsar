@@ -14,7 +14,6 @@
 ## 技术选型
 - picocli
 - freemarker
-- 
 ## 使用
 1.进入 collapsar-generator-basic 目录,执行命令:
 ```shell
